@@ -51,4 +51,8 @@ if [ "$DO_DEPLOY" = "1" ]; then
     chmod -R 777 var pub
 fi
 
+cd "$MAGENTO_ROOT"
+php bin/magento module:disable Magestore_Giftvoucher
+php bin/magento cache:clean
+chmod -R 777 var pub
 
