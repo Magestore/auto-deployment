@@ -15,9 +15,10 @@ sh "$AUTO_DEPLOY"/auto-deploy.sh
 
 cd "$PACKAGE"
 
-sh ../"$AUTO_DEPLOY"/demo-magento2.magestore.com/starter-01/pull/pos.sh
+SUB_DEPLOY=`sh ../"$AUTO_DEPLOY"/demo-magento2.magestore.com/starter-01/pull/pos.sh`
+DO_DEPLOY=`[ "$SUB_DEPLOY" = "1" ] && echo "1" || echo $DO_DEPLOY`
 
-if [ $DO_DEPLOY -eq 1 ]; then
+if [ "$DO_DEPLOY" = "1" ]; then
     cd ../
     php bin/magento setup:upgrade
     php bin/magento cache:clean

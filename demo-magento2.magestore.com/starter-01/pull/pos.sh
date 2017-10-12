@@ -1,4 +1,5 @@
 DIRECTORY="webpos"
+DO_DEPLOY=0;
 if [ -d "$DIRECTORY" ]; then
     cd "$DIRECTORY"
     STATUS=`git pull`
@@ -13,3 +14,4 @@ else
 fi
 chown -R www-data:ftpuser *
 cp -R -p * ../../
+echo $DO_DEPLOY
