@@ -17,7 +17,7 @@ cd "$PACKAGE"
 
 sh ../"$AUTO_DEPLOY"/demo-magento2.magestore.com/starter-01/pull/pos.sh
 
-if [$DO_DEPLOY -eq 1]; then
+if [ $DO_DEPLOY -eq 1 ]; then
     cd ../
     php bin/magento setup:upgrade
     php bin/magento cache:clean
