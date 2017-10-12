@@ -13,6 +13,6 @@ else
     cd "$DIRECTORY"
     DO_DEPLOY=1
 fi
-chown -R www-data:ftpuser *
+chown -R www-data:www-data *
 cp -R -p * ../../
 echo $DO_DEPLOY
