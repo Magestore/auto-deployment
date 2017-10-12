@@ -9,7 +9,11 @@ else
 fi
 
 cd "$MAGENTO_ROOT"
+
+sh "$AUTO_DEPLOY"/auto-deploy.sh
+
 cd "$PACKAGE"
+
 sh ../"$AUTO_DEPLOY"/demo-magento2.magestore.com/starter-01/pull/pos.sh
 cd ../
 php bin/magento setup:upgrade

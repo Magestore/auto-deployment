@@ -1,7 +1,5 @@
 AUTO_DEPLOY="auto-deploy"
 
-git config --global credential.helper 'cache --timeout=99999999999'
-
 if [ -d "$AUTO_DEPLOY/.git" ]; then
     cd "$AUTO_DEPLOY"
     git pull
