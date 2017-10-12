@@ -1,5 +1,5 @@
 DO_DEPLOY=0
-REPO="WebPOS-Magento2-New"
+REPO="omc-starter"
 DIRECTORY=$REPO
 if [ -d "$DIRECTORY" ]; then
     cd "$DIRECTORY"

@@ -1,5 +1,5 @@
 DO_DEPLOY=0
-REPO="WebPOS-Magento2-New"
+REPO="OS-Inventorysuccess-M2"
 DIRECTORY=$REPO
 if [ -d "$DIRECTORY" ]; then
     cd "$DIRECTORY"

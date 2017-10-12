@@ -18,6 +18,13 @@ cd "$PACKAGE"
 SUB_DEPLOY=`sh ../"$AUTO_DEPLOY"/demo-magento2.magestore.com/starter-01/pull/pos.sh`
 DO_DEPLOY=`[ "$SUB_DEPLOY" = "1" ] && echo "1" || echo $DO_DEPLOY`
 
+SUB_DEPLOY=`sh ../"$AUTO_DEPLOY"/demo-magento2.magestore.com/starter-01/pull/im.sh`
+DO_DEPLOY=`[ "$SUB_DEPLOY" = "1" ] && echo "1" || echo $DO_DEPLOY`
+
+SUB_DEPLOY=`sh ../"$AUTO_DEPLOY"/demo-magento2.magestore.com/starter-01/pull/starter.sh`
+DO_DEPLOY=`[ "$SUB_DEPLOY" = "1" ] && echo "1" || echo $DO_DEPLOY`
+
+
 if [ "$DO_DEPLOY" = "1" ]; then
     cd ../
     php bin/magento setup:upgrade
