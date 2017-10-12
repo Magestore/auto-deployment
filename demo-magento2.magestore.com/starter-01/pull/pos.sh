@@ -2,7 +2,7 @@ DIRECTORY="webpos"
 if [ -d "$DIRECTORY" ]; then
     cd "$DIRECTORY"
     STATUS=`git pull`
-    if [ "$STATUS" -ne "Already up-to-date." ]; then
+    if [ "$STATUS" != "Already up-to-date." ]; then
         DO_DEPLOY=1
     fi
 else
