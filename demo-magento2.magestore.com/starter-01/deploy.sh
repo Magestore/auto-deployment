@@ -1,6 +1,13 @@
 MAGENTO_ROOT="/var/www/omnichannel/starter/01"
 PACKAGE="packages"
 AUTO_DEPLOY="auto-deploy"
+
+if [ -d "$PACKAGE" ]; then
+    cd ./
+else
+    mkdir "$PACKAGE"
+fi
+
 cd "$MAGENTO_ROOT"
 cd "$PACKAGE"
 sh ../"$AUTO_DEPLOY"/demo-magento2.magestore.com/starter-01/pull/pos.sh
