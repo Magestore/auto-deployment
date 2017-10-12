@@ -1,7 +1,10 @@
 DIRECTORY="webpos"
 if [ -d "$DIRECTORY" ]; then
     cd "$DIRECTORY"
-    git pull
+    STATUS=`git pull`
+    if ["$STATUS" -ne "Already up-to-date."]; then
+        $DO_DEPLOY="1"
+    fi
 else
     git config --global credential.helper 'cache --timeout=99999999999'
     git clone -b Omnichannel https://github.com/Magestore/WebPOS-Magento2-New "$DIRECTORY"
