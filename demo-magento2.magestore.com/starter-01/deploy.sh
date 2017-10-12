@@ -1,4 +1,5 @@
 MAGENTO_ROOT="/var/www/omnichannel/starter/01"
+DEPLOY_PATH="demo-magento2.magestore.com/starter-01"
 PACKAGE="packages"
 AUTO_DEPLOY="auto-deploy"
 DO_DEPLOY=0;
@@ -15,13 +16,13 @@ sh "$AUTO_DEPLOY"/auto-deploy.sh
 
 cd "$PACKAGE"
 
-SUB_DEPLOY=`sh ../"$AUTO_DEPLOY"/demo-magento2.magestore.com/starter-01/pull/pos.sh`
+SUB_DEPLOY=`sh ../"$AUTO_DEPLOY"/"$DEPLOY_PATH"/pull/pos.sh`
 DO_DEPLOY=`[ "$SUB_DEPLOY" = "1" ] && echo "1" || echo $DO_DEPLOY`
 
-SUB_DEPLOY=`sh ../"$AUTO_DEPLOY"/demo-magento2.magestore.com/starter-01/pull/im.sh`
+SUB_DEPLOY=`sh ../"$AUTO_DEPLOY"/"$DEPLOY_PATH"/pull/im.sh`
 DO_DEPLOY=`[ "$SUB_DEPLOY" = "1" ] && echo "1" || echo $DO_DEPLOY`
 
-SUB_DEPLOY=`sh ../"$AUTO_DEPLOY"/demo-magento2.magestore.com/starter-01/pull/starter.sh`
+SUB_DEPLOY=`sh ../"$AUTO_DEPLOY"/"$DEPLOY_PATH"/pull/starter.sh`
 DO_DEPLOY=`[ "$SUB_DEPLOY" = "1" ] && echo "1" || echo $DO_DEPLOY`
 
 
