@@ -19,10 +19,22 @@ cd "$PACKAGE"
 SUB_DEPLOY=`sh ../"$AUTO_DEPLOY"/"$DEPLOY_PATH"/pull/barcode.sh`
 DO_DEPLOY=`[ "$SUB_DEPLOY" = "1" ] && echo "1" || echo $DO_DEPLOY`
 
+SUB_DEPLOY=`sh ../"$AUTO_DEPLOY"/"$DEPLOY_PATH"/pull/dropship.sh`
+DO_DEPLOY=`[ "$SUB_DEPLOY" = "1" ] && echo "1" || echo $DO_DEPLOY`
+
+SUB_DEPLOY=`sh ../"$AUTO_DEPLOY"/"$DEPLOY_PATH"/pull/fulfil.sh`
+DO_DEPLOY=`[ "$SUB_DEPLOY" = "1" ] && echo "1" || echo $DO_DEPLOY`
+
+SUB_DEPLOY=`sh ../"$AUTO_DEPLOY"/"$DEPLOY_PATH"/pull/fulfilreport.sh`
+DO_DEPLOY=`[ "$SUB_DEPLOY" = "1" ] && echo "1" || echo $DO_DEPLOY`
+
 SUB_DEPLOY=`sh ../"$AUTO_DEPLOY"/"$DEPLOY_PATH"/pull/giftcard.sh`
 DO_DEPLOY=`[ "$SUB_DEPLOY" = "1" ] && echo "1" || echo $DO_DEPLOY`
 
 SUB_DEPLOY=`sh ../"$AUTO_DEPLOY"/"$DEPLOY_PATH"/pull/im.sh`
+DO_DEPLOY=`[ "$SUB_DEPLOY" = "1" ] && echo "1" || echo $DO_DEPLOY`
+
+SUB_DEPLOY=`sh ../"$AUTO_DEPLOY"/"$DEPLOY_PATH"/pull/ordersuccess.sh`
 DO_DEPLOY=`[ "$SUB_DEPLOY" = "1" ] && echo "1" || echo $DO_DEPLOY`
 
 SUB_DEPLOY=`sh ../"$AUTO_DEPLOY"/"$DEPLOY_PATH"/pull/po.sh`

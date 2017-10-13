@@ -1,5 +1,5 @@
 DO_DEPLOY=0
-REPO="SupplierSuccess"
+REPO="FulfilReport-M2"
 DIRECTORY=$REPO
 if [ -d "$DIRECTORY" ]; then
     cd "$DIRECTORY"
@@ -18,9 +18,10 @@ chown -R www-data:ftpuser *
 
 if [ "$DO_DEPLOY" = "1" ]; then
     chown -R www-data:ftpuser *
-    rm -rf ../../app/code/Magestore/SupplierSuccess
-    mkdir ../../app/code/Magestore/SupplierSuccess
-    cp -R -p * ../../app/code/Magestore/SupplierSuccess
+    rm -rf ../../app/code/Magestore/FulfilReport
+    mkdir ../../app/code/Magestore/FulfilReport
+    cp -R -p * ../../app/code/Magestore/FulfilReport
 fi
 
 echo $DO_DEPLOY
+

@@ -1,5 +1,5 @@
 DO_DEPLOY=0
-REPO="SupplierSuccess"
+REPO="OrderSuccess"
 DIRECTORY=$REPO
 if [ -d "$DIRECTORY" ]; then
     cd "$DIRECTORY"
@@ -9,7 +9,7 @@ if [ -d "$DIRECTORY" ]; then
     fi
 else
     git config --global credential.helper 'cache --timeout=99999999999'
-    git clone -b master https://github.com/Magestore/"$REPO" "$DIRECTORY"
+    git clone -b dev https://github.com/Magestore/"$REPO" "$DIRECTORY"
     cd "$DIRECTORY"
     DO_DEPLOY=1
 fi
@@ -18,9 +18,9 @@ chown -R www-data:ftpuser *
 
 if [ "$DO_DEPLOY" = "1" ]; then
     chown -R www-data:ftpuser *
-    rm -rf ../../app/code/Magestore/SupplierSuccess
-    mkdir ../../app/code/Magestore/SupplierSuccess
-    cp -R -p * ../../app/code/Magestore/SupplierSuccess
+    rm -rf ../../app/code/Magestore/OrderSuccess
+    mkdir ../../app/code/Magestore/OrderSuccess
+    cp -R -p * ../../app/code/Magestore/OrderSuccess
 fi
 
 echo $DO_DEPLOY
