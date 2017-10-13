@@ -51,5 +51,8 @@ if [ "$DO_DEPLOY" = "1" ]; then
     chmod -R 777 var pub
 fi
 
+cd "$MAGENTO_ROOT"
+
 php bin/magento module:enable Magestore_Giftvoucher
+
 chmod -R 777 var pub
