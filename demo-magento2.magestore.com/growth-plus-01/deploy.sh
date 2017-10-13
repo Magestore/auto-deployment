@@ -1,5 +1,5 @@
-MAGENTO_ROOT="/var/www/omnichannel/growth/01"
-DEPLOY_PATH="demo-magento2.magestore.com/growth-01"
+MAGENTO_ROOT="/var/www/omnichannel/growth-plus/01"
+DEPLOY_PATH="demo-magento2.magestore.com/growth-plus-01"
 PACKAGE="packages"
 AUTO_DEPLOY="auto-deploy"
 DO_DEPLOY=0;
