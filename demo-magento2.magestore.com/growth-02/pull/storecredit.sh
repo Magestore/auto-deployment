@@ -1,5 +1,5 @@
 DO_DEPLOY=0
-REPO="Giftcard-Magento2"
+REPO="Storecredit-Magento2"
 DIRECTORY=$REPO
 if [ -d "$DIRECTORY" ]; then
     cd "$DIRECTORY"

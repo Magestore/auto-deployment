@@ -1,7 +1,6 @@
 DO_DEPLOY=0
 REPO="Giftcard-Magento2"
 DIRECTORY=$REPO
-rm -rf "$DIRECTORY"
 if [ -d "$DIRECTORY" ]; then
     cd "$DIRECTORY"
     STATUS=`git pull`

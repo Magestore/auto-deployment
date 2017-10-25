@@ -1,5 +1,5 @@
 DO_DEPLOY=0
-REPO="Giftcard-Magento2"
+REPO="BarcodeSuccess-M2"
 DIRECTORY=$REPO
 if [ -d "$DIRECTORY" ]; then
     cd "$DIRECTORY"
@@ -9,7 +9,7 @@ if [ -d "$DIRECTORY" ]; then
     fi
 else
     git config --global credential.helper 'cache --timeout=99999999999'
-    git clone -b omnichannel https://github.com/Magestore/"$REPO" "$DIRECTORY"
+    git clone -b omnichann https://github.com/Magestore/"$REPO" "$DIRECTORY"
     cd "$DIRECTORY"
     DO_DEPLOY=1
 fi
