@@ -9,8 +9,6 @@ cd "$MAGENTO_ROOT"
 
 sh "$AUTO_DEPLOY"/auto-deploy.sh
 
-rm -rf "$PACKAGE"
-
 if [ -d "$PACKAGE" ]; then
     cd ./
 else
