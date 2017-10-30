@@ -6,15 +6,15 @@ DO_DEPLOY=0;
 
 rm -rf "$PACKAGE"
 
+cd "$MAGENTO_ROOT"
+
+sh "$AUTO_DEPLOY"/auto-deploy.sh
+
 if [ -d "$PACKAGE" ]; then
     cd ./
 else
     mkdir "$PACKAGE"
 fi
-
-cd "$MAGENTO_ROOT"
-
-sh "$AUTO_DEPLOY"/auto-deploy.sh
 
 cd "$PACKAGE"
 
