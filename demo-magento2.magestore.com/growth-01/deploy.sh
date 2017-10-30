@@ -4,6 +4,8 @@ PACKAGE="packages"
 AUTO_DEPLOY="auto-deploy"
 DO_DEPLOY=0;
 
+rm -rf "$PACKAGE"
+
 if [ -d "$PACKAGE" ]; then
     cd ./
 else
