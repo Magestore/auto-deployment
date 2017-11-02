@@ -1,18 +1,20 @@
+SERVER_ROOT="/var/www"
 MAGENTO_ROOT="/var/www/omnichannel/growth/02"
 DEPLOY_PATH="demo-magento2.magestore.com/growth-02"
 PACKAGE="packages"
 AUTO_DEPLOY="auto-deploy"
 DO_DEPLOY=0;
 
+cd "$SERVER_ROOT"
+sh "$AUTO_DEPLOY"/auto-deploy.sh
+
+cd "$MAGENTO_ROOT"
+
 if [ -d "$PACKAGE" ]; then
     cd ./
 else
     mkdir "$PACKAGE"
 fi
-
-cd "$MAGENTO_ROOT"
-
-sh "$AUTO_DEPLOY"/auto-deploy.sh
 
 cd "$PACKAGE"
 
