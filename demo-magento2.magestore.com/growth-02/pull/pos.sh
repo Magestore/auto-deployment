@@ -1,6 +1,7 @@
 DO_DEPLOY=0
 REPO="WebPOS-Magento2-New"
 DIRECTORY=$REPO
+
 if [ -d "$DIRECTORY" ]; then
     cd "$DIRECTORY"
     STATUS=`git pull`
@@ -9,7 +10,7 @@ if [ -d "$DIRECTORY" ]; then
     fi
 else
     git config --global credential.helper 'cache --timeout=99999999999'
-    git clone -b Omnichannel https://github.com/Magestore/"$REPO" "$DIRECTORY"
+    git clone -b dev https://github.com/Magestore/"$REPO" "$DIRECTORY"
     cd "$DIRECTORY"
     DO_DEPLOY=1
 fi

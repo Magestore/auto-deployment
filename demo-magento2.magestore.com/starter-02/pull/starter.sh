@@ -1,5 +1,5 @@
 DO_DEPLOY=0
-REPO="Giftcard-Magento2"
+REPO="omc-starter"
 DIRECTORY=$REPO
 if [ -d "$DIRECTORY" ]; then
     cd "$DIRECTORY"
