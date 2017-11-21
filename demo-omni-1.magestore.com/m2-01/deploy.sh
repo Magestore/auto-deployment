@@ -1,6 +1,6 @@
 SERVER_ROOT="/var/www"
-MAGENTO_ROOT="/var/www/m2/growth-plus/01"
-DEPLOY_PATH="demo-omni.magestore.com/m2-growth-plus-01"
+MAGENTO_ROOT="/var/www/m2/01"
+DEPLOY_PATH="demo-omni-1.magestore.com/m2-01"
 PACKAGE="packages"
 AUTO_DEPLOY="auto-deployment"
 DO_DEPLOY=0;
