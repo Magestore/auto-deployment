@@ -15,7 +15,7 @@ else
 fi
 
 if [ "$DO_DEPLOY" = "1" ]; then
-    chown -R www-data:ftpuser *
+    chown -R www-data:www-data *
     rm -rf ../../app/code/Magestore/SupplierSuccess
     mkdir ../../app/code/Magestore/SupplierSuccess
     cp -R -p * ../../app/code/Magestore/SupplierSuccess
