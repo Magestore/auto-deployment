@@ -8,6 +8,8 @@ DO_DEPLOY=0;
 cd "$SERVER_ROOT"
 sh "$AUTO_DEPLOY"/auto-deploy.sh
 
+rm -rf "$MAGENTO_ROOT"/"$AUTO_DEPLOY"
+
 cp -R "$AUTO_DEPLOY"/"$DEPLOY_PATH" "$MAGENTO_ROOT"/"$AUTO_DEPLOY"
 
 cd "$MAGENTO_ROOT"
