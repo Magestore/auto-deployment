@@ -26,10 +26,22 @@ cd "$PACKAGE"
 SUB_DEPLOY=`sh ../"$AUTO_DEPLOY"/pull/barcode.sh`
 DO_DEPLOY=`[ "$SUB_DEPLOY" = "1" ] && echo "1" || echo $DO_DEPLOY`
 
+SUB_DEPLOY=`sh ../"$AUTO_DEPLOY"/pull/dropship.sh`
+DO_DEPLOY=`[ "$SUB_DEPLOY" = "1" ] && echo "1" || echo $DO_DEPLOY`
+
+SUB_DEPLOY=`sh ../"$AUTO_DEPLOY"/pull/fulfil.sh`
+DO_DEPLOY=`[ "$SUB_DEPLOY" = "1" ] && echo "1" || echo $DO_DEPLOY`
+
+SUB_DEPLOY=`sh ../"$AUTO_DEPLOY"/pull/fulfilreport.sh`
+DO_DEPLOY=`[ "$SUB_DEPLOY" = "1" ] && echo "1" || echo $DO_DEPLOY`
+
 SUB_DEPLOY=`sh ../"$AUTO_DEPLOY"/pull/giftcard.sh`
 DO_DEPLOY=`[ "$SUB_DEPLOY" = "1" ] && echo "1" || echo $DO_DEPLOY`
 
 SUB_DEPLOY=`sh ../"$AUTO_DEPLOY"/pull/im.sh`
+DO_DEPLOY=`[ "$SUB_DEPLOY" = "1" ] && echo "1" || echo $DO_DEPLOY`
+
+SUB_DEPLOY=`sh ../"$AUTO_DEPLOY"/pull/ordersuccess.sh`
 DO_DEPLOY=`[ "$SUB_DEPLOY" = "1" ] && echo "1" || echo $DO_DEPLOY`
 
 SUB_DEPLOY=`sh ../"$AUTO_DEPLOY"/pull/po.sh`
