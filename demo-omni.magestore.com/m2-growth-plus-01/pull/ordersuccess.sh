@@ -14,7 +14,7 @@ else
     DO_DEPLOY=1
 fi
 
-chown -R www-data:ftpuser *
+chown -R www-data:www-data *
 
 if [ "$DO_DEPLOY" = "1" ]; then
     chown -R www-data:ftpuser *
