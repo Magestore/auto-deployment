@@ -1,4 +1,4 @@
-AUTO_DEPLOY="auto-deploy"
+AUTO_DEPLOY="auto-deployment"
 
 if [ -d "$AUTO_DEPLOY/.git" ]; then
     cd "$AUTO_DEPLOY"
