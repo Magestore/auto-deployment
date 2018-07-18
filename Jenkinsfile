@@ -4,7 +4,6 @@ pipeline {
     stage('Start') {
       steps {
         echo 'Starting New Demo Version'
-        build 'Update demo site'
       }
     }
   }
